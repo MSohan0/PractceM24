@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <h1 onclick="alert('H1 is clicked')">Working with Event</h1>
+    <button onclick="console.log(9)">Click Me</button><br>
+    <button onclick="document.body.style.backgroundColor='yellow'">Click me if you want Yellow</button><br>
+    <button onclick="makeRed()">Make Me Red</button><br>
+    <button onclick="makePink()">Make Me Pink</button><br>
+    <button id="make-me-blue">Make Me Blue</button><br>
+    <button id="make-me-green"> Make me Green</button><br>
+    <button id="buttonGoldenRod">Make me Golden Rod</button><br>
+    <button id="make-me-Chartreuse"> Make me Chartreuse</button><br>
+    <button id="make-me-OrangeRed"> Make me OrangeRed</button>
+    <script src="js/event.js"></script>
+    <script>
+        function makeRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+        // change color getElementById
+        const blueButton = document.getElementById('make-me-blue');
+        blueButton.onclick = makeBlue;
+        function makeBlue() {
+            document.body.style.backgroundColor = 'blue';
+        }
+    </script>
+    <script>
+        document.getElementById('make-me-OrangeRed').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'OrangeRed';
+        })
+    </script>
+
+</body>
+
+</html>
